@@ -1,0 +1,28 @@
+﻿@model Student
+@{
+    ViewData["Title"] = "UpdateStudent";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Məlumatda Düzəliş etmək</h1>
+<br />
+@using (Html.BeginForm("UpdateStudent", "Student", FormMethod.Post))
+{
+    @Html.Label("Id")
+    ;
+    @Html.TextBoxFor(p => p.Id, new { @class = "form-control" })
+    ;
+    <br />
+    @Html.Label("Ad")
+    ;
+    @Html.TextBoxFor(p => p.Name, new { @class = "form-control" })
+    ;
+    <br />
+    @Html.Label("Soyad")
+    ;
+    @Html.TextBoxFor(p => p.Surname, new { @class = "form-control" })
+    ;
+    <br />
+    
+    <button class="btn btn-info" type="submit">Düzəlt</button>
+}

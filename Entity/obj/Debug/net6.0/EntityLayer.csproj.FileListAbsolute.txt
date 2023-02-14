@@ -10,3 +10,15 @@ C:\Users\User\Desktop\ExamTask\Entity\obj\Debug\net6.0\EntityLayer.dll
 C:\Users\User\Desktop\ExamTask\Entity\obj\Debug\net6.0\refint\EntityLayer.dll
 C:\Users\User\Desktop\ExamTask\Entity\obj\Debug\net6.0\EntityLayer.pdb
 C:\Users\User\Desktop\ExamTask\Entity\obj\Debug\net6.0\ref\EntityLayer.dll
+C:\Users\Mr Orkhan\Desktop\ExamProect\Entity\bin\Debug\net6.0\EntityLayer.deps.json
+C:\Users\Mr Orkhan\Desktop\ExamProect\Entity\bin\Debug\net6.0\EntityLayer.dll
+C:\Users\Mr Orkhan\Desktop\ExamProect\Entity\bin\Debug\net6.0\EntityLayer.pdb
+C:\Users\Mr Orkhan\Desktop\ExamProect\Entity\obj\Debug\net6.0\EntityLayer.csproj.AssemblyReference.cache
+C:\Users\Mr Orkhan\Desktop\ExamProect\Entity\obj\Debug\net6.0\EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mr Orkhan\Desktop\ExamProect\Entity\obj\Debug\net6.0\EntityLayer.AssemblyInfoInputs.cache
+C:\Users\Mr Orkhan\Desktop\ExamProect\Entity\obj\Debug\net6.0\EntityLayer.AssemblyInfo.cs
+C:\Users\Mr Orkhan\Desktop\ExamProect\Entity\obj\Debug\net6.0\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\Mr Orkhan\Desktop\ExamProect\Entity\obj\Debug\net6.0\EntityLayer.dll
+C:\Users\Mr Orkhan\Desktop\ExamProect\Entity\obj\Debug\net6.0\refint\EntityLayer.dll
+C:\Users\Mr Orkhan\Desktop\ExamProect\Entity\obj\Debug\net6.0\EntityLayer.pdb
+C:\Users\Mr Orkhan\Desktop\ExamProect\Entity\obj\Debug\net6.0\ref\EntityLayer.dll
