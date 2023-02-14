@@ -33,9 +33,6 @@ namespace DataAccessLayer.Migrations
                     b.Property<DateTime>("ExamDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("ExamScore")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.ToTable("Exams");
@@ -48,17 +45,6 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("Class")
-                        .HasColumnType("int");
-
-                    b.Property<string>("CodeOfLesson")
-                        .IsRequired()
-                        .HasMaxLength(3)
-                        .HasColumnType("nvarchar(3)");
-
-                    b.Property<int>("ExamId")
-                        .HasColumnType("int");
 
                     b.Property<string>("NameOfLesson")
                         .IsRequired()
@@ -77,8 +63,6 @@ namespace DataAccessLayer.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ExamId");
-
                     b.ToTable("Lessons");
                 });
 
@@ -90,16 +74,10 @@ namespace DataAccessLayer.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("Class")
-                        .HasColumnType("int");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
-
-                    b.Property<int>("StudentNumber")
-                        .HasColumnType("int");
 
                     b.Property<string>("Surname")
                         .IsRequired()
@@ -119,7 +97,13 @@ namespace DataAccessLayer.Migrations
                     b.Property<int>("StudentId")
                         .HasColumnType("int");
 
+                    b.Property<int>("ExamScore")
+                        .HasColumnType("int");
+
                     b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StudentNumber")
                         .HasColumnType("int");
 
                     b.HasKey("ExamId", "StudentId");
@@ -137,6 +121,9 @@ namespace DataAccessLayer.Migrations
                     b.Property<int>("StudentId")
                         .HasColumnType("int");
 
+                    b.Property<int>("Class")
+                        .HasColumnType("int");
+
                     b.Property<int>("Id")
                         .HasColumnType("int");
 
@@ -147,15 +134,26 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("StudentLessons");
                 });
 
-            modelBuilder.Entity("Entity.Concrete.Lesson", b =>
+            modelBuilder.Entity("EntityLayer.Concrete.ExamLesson", b =>
                 {
-                    b.HasOne("Entity.Concrete.Exam", "Exam")
-                        .WithMany("Lessons")
-                        .HasForeignKey("ExamId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<int>("ExamId")
+                        .HasColumnType("int");
 
-                    b.Navigation("Exam");
+                    b.Property<int>("LessonId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<string>("LessonCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1)");
+
+                    b.HasKey("ExamId", "LessonId");
+
+                    b.HasIndex("LessonId");
+
+                    b.ToTable("ExamLesson");
                 });
 
             modelBuilder.Entity("Entity.Concrete.StudentExam", b =>
@@ -196,15 +194,36 @@ namespace DataAccessLayer.Migrations
                     b.Navigation("Student");
                 });
 
+            modelBuilder.Entity("EntityLayer.Concrete.ExamLesson", b =>
+                {
+                    b.HasOne("Entity.Concrete.Exam", "Exam")
+                        .WithMany("ExamLessons")
+                        .HasForeignKey("ExamId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Entity.Concrete.Lesson", "Lesson")
+                        .WithMany("ExamLessons")
+                        .HasForeignKey("LessonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Exam");
+
+                    b.Navigation("Lesson");
+                });
+
             modelBuilder.Entity("Entity.Concrete.Exam", b =>
                 {
-                    b.Navigation("Lessons");
+                    b.Navigation("ExamLessons");
 
                     b.Navigation("StudentExams");
                 });
 
             modelBuilder.Entity("Entity.Concrete.Lesson", b =>
                 {
+                    b.Navigation("ExamLessons");
+
                     b.Navigation("StudentLessons");
                 });
 

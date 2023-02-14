@@ -1,28 +1,22 @@
 ﻿using DataAccess.Context;
 using DataAccessLayer.Abstract;
-using DataAccessLayer.Context;
-using Entity.Abstract;
+using EntityLayer.Abstract;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccessLayer.Concrete
 {
     public class GenericRepository<T> : IGenericDal<T> where T : class, IEntity, new()
     {
        
-        public async void CreateAsync(T entity)
+        public async Task CreateAsync(T entity)
         {
             using var _dbContext = new ExamDb();
            await _dbContext.Set<T>().AddAsync(entity);
             await _dbContext.SaveChangesAsync();
         }
 
-        public async void DeleteAsync(T entity)
+        public async Task DeleteAsync(T entity)
         {
             using var _dbContext = new ExamDb();
             _dbContext.Set<T>().Remove(entity);
@@ -56,7 +50,7 @@ namespace DataAccessLayer.Concrete
             return entity;
         }
 
-        public async void UpdateAsync(T entity)
+        public async Task UpdateAsync(T entity)
         {
             using var _dbContext = new ExamDb();
             _dbContext.Set<T>().Update(entity);

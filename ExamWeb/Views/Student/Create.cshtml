@@ -1,0 +1,21 @@
+﻿@model Student
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Yeni Şagird Yarat</h1>
+@using (Html.BeginForm("Create", "Student", FormMethod.Post))
+{
+    @Html.Label("Ad")
+    @Html.TextBoxFor(p => p.Name, new { @class = "form-control" })
+    @Html.ValidationMessageFor(p => p.Name)
+    <br />
+    @Html.Label("Soyad")
+    @Html.TextBoxFor(p => p.Surname, new { @class = "form-control" })
+    @Html.ValidationMessageFor(p => p.Surname)
+    <br />
+ 
+    <button class="btn btn-info">Yarat</button>
+}
+

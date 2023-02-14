@@ -1,11 +1,6 @@
 ﻿using DataAccessLayer.Context;
-using Entity.Concrete;
+using EntityLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccess.Context
 {
@@ -31,8 +26,7 @@ namespace DataAccess.Context
                 .Property(p => p.Id).UseIdentityColumn(1, 1);
             modelBuilder.Entity<Exam>()
                 .Property(p => p.ExamDate).IsRequired();
-            modelBuilder.Entity<Exam>()
-                .Property(p => p.ExamScore).IsRequired();
+           
 
 
             modelBuilder.Entity<Student>()
@@ -43,10 +37,7 @@ namespace DataAccess.Context
                 .Property(p=>p.Surname).HasMaxLength(30).IsRequired();
             modelBuilder.Entity<Student>()
               .Property(p => p.Name).HasMaxLength(30).IsRequired();
-            modelBuilder.Entity<Student>()
-             .Property(p => p.Class).IsRequired();
-            modelBuilder.Entity<Student>()
-                .Property(p => p.StudentNumber).IsRequired();
+       
 
 
             modelBuilder.Entity<Lesson>()
@@ -56,18 +47,11 @@ namespace DataAccess.Context
             modelBuilder.Entity<Lesson>()
                 .Property(p => p.NameOfLesson).HasMaxLength(30).IsRequired();
             modelBuilder.Entity<Lesson>()
-                .Property(p=>p.CodeOfLesson).HasMaxLength(3).IsRequired();
-            modelBuilder.Entity<Lesson>()
+          
                .Property(p => p.TeacherName).HasMaxLength(30).IsRequired();
             modelBuilder.Entity<Lesson>()
              .Property(p => p.TecaherSurname).HasMaxLength(30).IsRequired();
-            modelBuilder.Entity<Lesson>()
-                .Property(p => p.Class).IsRequired();
-            modelBuilder.Entity<Lesson>()
-                .HasOne(p => p.Exam).WithMany(p => p.Lessons).HasForeignKey(p => p.ExamId).OnDelete(DeleteBehavior.Cascade);
-
-
-
+         
 
 
             modelBuilder.Entity<StudentLesson>()
@@ -75,7 +59,7 @@ namespace DataAccess.Context
             modelBuilder.Entity<StudentLesson>()
                 .HasOne(bc => bc.Lesson)
                 .WithMany(b => b.StudentLessons)
-                .HasForeignKey(bc => bc.LessonId);
+                .HasForeignKey(bc => bc.LessonId).OnDelete(DeleteBehavior.Cascade);
             modelBuilder.Entity<StudentLesson>()
                 .HasOne(bc => bc.Student)
                 .WithMany(c => c.StudentLessons)
@@ -87,11 +71,23 @@ namespace DataAccess.Context
             modelBuilder.Entity<StudentExam>()
                 .HasOne(bc => bc.Exam)
                 .WithMany(b => b.StudentExams)
-                .HasForeignKey(bc => bc.ExamId);
+                .HasForeignKey(bc => bc.ExamId).OnDelete(DeleteBehavior.Cascade);
             modelBuilder.Entity<StudentExam>()
                 .HasOne(bc => bc.Student)
                 .WithMany(c => c.StudentExams)
                 .HasForeignKey(bc => bc.StudentId).OnDelete(DeleteBehavior.Cascade);
+
+
+            modelBuilder.Entity<ExamLesson>()
+                .HasKey(bc => new { bc.ExamId, bc.LessonId });
+            modelBuilder.Entity<ExamLesson>()
+                .HasOne(bc => bc.Exam)
+                .WithMany(b => b.ExamLessons)
+                .HasForeignKey(bc => bc.ExamId).OnDelete(DeleteBehavior.Cascade);
+            modelBuilder.Entity<ExamLesson>()
+                .HasOne(bc => bc.Lesson)
+                .WithMany(c => c.ExamLessons)
+                .HasForeignKey(bc => bc.LessonId).OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

@@ -1,20 +1,15 @@
-﻿using Entity.Abstract;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using EntityLayer.Abstract;
 
-namespace Entity.Concrete
+namespace EntityLayer.Concrete
 {
     public class Exam:IEntity
     {
         public int Id { get; set; }
         public DateTime ExamDate { get; set; }
-        public int ExamScore { get; set; }
 
-        public IList<Lesson> Lessons { get; set; } = new List<Lesson>();
         public IList<StudentExam> StudentExams { get; set; }=new List<StudentExam>();
+        public IList<ExamLesson> ExamLessons { get; set; } = new List<ExamLesson>();
+
 
     }
 }

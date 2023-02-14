@@ -1,10 +1,5 @@
-﻿using Entity.Abstract;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using EntityLayer.Abstract;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccessLayer.Abstract
 {
@@ -12,8 +7,8 @@ namespace DataAccessLayer.Abstract
     {
         Task<IList<T>>GetAll(Expression<Func<T, bool>>? filter=null);
         Task<T> GetById(int id);
-        void CreateAsync(T entity);
-        void DeleteAsync(T entity);
-        void UpdateAsync(T entity);
+        Task CreateAsync(T entity);
+        Task DeleteAsync(T entity);
+        Task UpdateAsync(T entity);
     }
 }
