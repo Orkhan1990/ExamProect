@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DataAccessLayer.Migrations
 {
-    public partial class initial_migration : Migration
+    public partial class Initial_migration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -30,7 +30,7 @@ namespace DataAccessLayer.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     NameOfLesson = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
                     TeacherName = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
-                    TecaherSurname = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false)
+                    TeacherSurname = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false)
                 },
                 constraints: table =>
                 {

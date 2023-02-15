@@ -10,6 +10,13 @@ namespace EntityLayer.Concrete
         public IList<StudentExam> StudentExams { get; set; }=new List<StudentExam>();
         public IList<ExamLesson> ExamLessons { get; set; } = new List<ExamLesson>();
 
+        public Exam()
+        {
 
+        }
+        public Exam(DateTime examDate)
+        {
+            this.ExamDate = examDate;
+        }
     }
 }

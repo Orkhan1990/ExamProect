@@ -1,0 +1,25 @@
+﻿@model Lesson
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Dərs Yarat</h1>
+<br/>
+@using (Html.BeginForm("Create", "Lesson", FormMethod.Post))
+{
+    @Html.Label("Dərsin adı")
+    @Html.TextBoxFor(p => p.NameOfLesson, new { @class = "form-control" })
+    @Html.ValidationMessageFor(p => p.NameOfLesson)
+    <br />
+    @Html.Label("Müəllimənin adı")
+    @Html.TextBoxFor(p => p.TeacherName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(p => p.TeacherName)
+    <br />
+    @Html.Label("Müəllimənin soyadı")
+    @Html.TextBoxFor(p => p.TeacherSurname, new { @class = "form-control" })
+    @Html.ValidationMessageFor(p => p.TeacherSurname)
+    <br />
+
+    <button class="btn btn-info">Yarat</button>
+}

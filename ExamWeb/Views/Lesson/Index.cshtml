@@ -1,0 +1,35 @@
+﻿@model List<Lesson>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Dərslərin Siyahısı</h1>
+<table class="table caption-top">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Dərsin adı</th>
+            <th scope="col">Müəllimənin adı</th>
+            <th scope="col">Müəllimənin soyadı</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">#</th>
+                <td>@item.NameOfLesson</td>
+                <td>@item.TeacherName</td>
+                <td>@item.TeacherSurname</td>
+                <td><a href="/Lesson/UpdateLesson/@item.Id" class="btn btn-success">Düzəlt</a></td>
+                <td><a href="/Lesson/DeleteLesson/@item.Id" class="btn btn-danger">Sil</a></td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+<a href="/Lesson/Create" class="btn btn-primary">Yarat</a>

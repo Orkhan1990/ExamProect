@@ -22,7 +22,7 @@ namespace DataAccessLayer.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Entity.Concrete.Exam", b =>
+            modelBuilder.Entity("EntityLayer.Concrete.Exam", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -36,102 +36,6 @@ namespace DataAccessLayer.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Exams");
-                });
-
-            modelBuilder.Entity("Entity.Concrete.Lesson", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("NameOfLesson")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
-
-                    b.Property<string>("TeacherName")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
-
-                    b.Property<string>("TecaherSurname")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Lessons");
-                });
-
-            modelBuilder.Entity("Entity.Concrete.Student", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
-
-                    b.Property<string>("Surname")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Students");
-                });
-
-            modelBuilder.Entity("Entity.Concrete.StudentExam", b =>
-                {
-                    b.Property<int>("ExamId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("StudentId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ExamScore")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Id")
-                        .HasColumnType("int");
-
-                    b.Property<int>("StudentNumber")
-                        .HasColumnType("int");
-
-                    b.HasKey("ExamId", "StudentId");
-
-                    b.HasIndex("StudentId");
-
-                    b.ToTable("StudentExams");
-                });
-
-            modelBuilder.Entity("Entity.Concrete.StudentLesson", b =>
-                {
-                    b.Property<int>("LessonId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("StudentId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Class")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Id")
-                        .HasColumnType("int");
-
-                    b.HasKey("LessonId", "StudentId");
-
-                    b.HasIndex("StudentId");
-
-                    b.ToTable("StudentLessons");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.ExamLesson", b =>
@@ -156,53 +60,111 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("ExamLesson");
                 });
 
-            modelBuilder.Entity("Entity.Concrete.StudentExam", b =>
+            modelBuilder.Entity("EntityLayer.Concrete.Lesson", b =>
                 {
-                    b.HasOne("Entity.Concrete.Exam", "Exam")
-                        .WithMany("StudentExams")
-                        .HasForeignKey("ExamId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.HasOne("Entity.Concrete.Student", "Student")
-                        .WithMany("StudentExams")
-                        .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Navigation("Exam");
+                    b.Property<string>("NameOfLesson")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
-                    b.Navigation("Student");
+                    b.Property<string>("TeacherName")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("TeacherSurname")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Lessons");
                 });
 
-            modelBuilder.Entity("Entity.Concrete.StudentLesson", b =>
+            modelBuilder.Entity("EntityLayer.Concrete.Student", b =>
                 {
-                    b.HasOne("Entity.Concrete.Lesson", "Lesson")
-                        .WithMany("StudentLessons")
-                        .HasForeignKey("LessonId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.HasOne("Entity.Concrete.Student", "Student")
-                        .WithMany("StudentLessons")
-                        .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Navigation("Lesson");
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
-                    b.Navigation("Student");
+                    b.Property<string>("Surname")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Students");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concrete.StudentExam", b =>
+                {
+                    b.Property<int>("ExamId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ExamScore")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StudentNumber")
+                        .HasColumnType("int");
+
+                    b.HasKey("ExamId", "StudentId");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("StudentExams");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concrete.StudentLesson", b =>
+                {
+                    b.Property<int>("LessonId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Class")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.HasKey("LessonId", "StudentId");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("StudentLessons");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.ExamLesson", b =>
                 {
-                    b.HasOne("Entity.Concrete.Exam", "Exam")
+                    b.HasOne("EntityLayer.Concrete.Exam", "Exam")
                         .WithMany("ExamLessons")
                         .HasForeignKey("ExamId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Entity.Concrete.Lesson", "Lesson")
+                    b.HasOne("EntityLayer.Concrete.Lesson", "Lesson")
                         .WithMany("ExamLessons")
                         .HasForeignKey("LessonId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -213,21 +175,59 @@ namespace DataAccessLayer.Migrations
                     b.Navigation("Lesson");
                 });
 
-            modelBuilder.Entity("Entity.Concrete.Exam", b =>
+            modelBuilder.Entity("EntityLayer.Concrete.StudentExam", b =>
+                {
+                    b.HasOne("EntityLayer.Concrete.Exam", "Exam")
+                        .WithMany("StudentExams")
+                        .HasForeignKey("ExamId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EntityLayer.Concrete.Student", "Student")
+                        .WithMany("StudentExams")
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Exam");
+
+                    b.Navigation("Student");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concrete.StudentLesson", b =>
+                {
+                    b.HasOne("EntityLayer.Concrete.Lesson", "Lesson")
+                        .WithMany("StudentLessons")
+                        .HasForeignKey("LessonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EntityLayer.Concrete.Student", "Student")
+                        .WithMany("StudentLessons")
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Lesson");
+
+                    b.Navigation("Student");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concrete.Exam", b =>
                 {
                     b.Navigation("ExamLessons");
 
                     b.Navigation("StudentExams");
                 });
 
-            modelBuilder.Entity("Entity.Concrete.Lesson", b =>
+            modelBuilder.Entity("EntityLayer.Concrete.Lesson", b =>
                 {
                     b.Navigation("ExamLessons");
 
                     b.Navigation("StudentLessons");
                 });
 
-            modelBuilder.Entity("Entity.Concrete.Student", b =>
+            modelBuilder.Entity("EntityLayer.Concrete.Student", b =>
                 {
                     b.Navigation("StudentExams");
 

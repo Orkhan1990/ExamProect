@@ -1,0 +1,34 @@
+﻿@model Lesson
+@{
+    ViewData["Title"] = "UpdateLesson";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Məlumatda Düzəliş etmək</h1>
+<br />
+@using (Html.BeginForm("UpdateLesson", "Lesson", FormMethod.Post))
+{
+    @Html.Label("Id")
+    ;
+    @Html.TextBoxFor(p => p.Id, new { @class = "form-control" })
+    ;
+    <br />
+    @Html.Label("Dərsin adı")
+    ;
+    @Html.TextBoxFor(p => p.NameOfLesson, new { @class = "form-control" })
+    ;
+    <br />
+    @Html.Label("Müəllimənin adı")
+    ;
+    @Html.TextBoxFor(p => p.TeacherName, new { @class = "form-control" })
+    ;
+    <br />
+    @Html.Label("Müəllimənin soyadı")
+    ;
+    @Html.TextBoxFor(p => p.TeacherSurname, new { @class = "form-control" })
+    ;
+    <br />
+
+    <button class="btn btn-info" type="submit">Düzəlt</button>
+}
+

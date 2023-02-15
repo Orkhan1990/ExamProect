@@ -50,7 +50,7 @@ namespace DataAccess.Context
           
                .Property(p => p.TeacherName).HasMaxLength(30).IsRequired();
             modelBuilder.Entity<Lesson>()
-             .Property(p => p.TecaherSurname).HasMaxLength(30).IsRequired();
+             .Property(p => p.TeacherSurname).HasMaxLength(30).IsRequired();
          
 
 

@@ -41,7 +41,9 @@ internal class Program
 
 
         builder.Services.AddScoped<IValidator<Student>, StudentValidation>();
-        //builder.Services.AddScoped<IValidator<Student>, StudentValidation>();
+        builder.Services.AddScoped<IValidator<Lesson>, LessonValidation>();
+        builder.Services.AddScoped<IValidator<Exam>, ExamValidation>();
+
 
 
         var app = builder.Build();
