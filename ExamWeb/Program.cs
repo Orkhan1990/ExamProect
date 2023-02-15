@@ -15,6 +15,7 @@ internal class Program
         var builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
+        builder.Services.AddAutoMapper(typeof(Program));
         builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
         builder.Services.AddMvc();
 

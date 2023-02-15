@@ -5,68 +5,69 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ExamWeb
 build_property.RootNamespace = ExamWeb
-build_property.ProjectDir = C:\Users\User\Desktop\ExamProect\ExamWeb\
+build_property.ProjectDir = C:\Users\Mr Orkhan\Desktop\ExamProject\ExamWeb\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = C:\Users\User\Desktop\ExamProect\ExamWeb
+build_property.MSBuildProjectDirectory = C:\Users\Mr Orkhan\Desktop\ExamProject\ExamWeb
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/User/Desktop/ExamProect/ExamWeb/Views/Exam/Index.cshtml]
+[C:/Users/Mr Orkhan/Desktop/ExamProject/ExamWeb/Views/Exam/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/ExamProect/ExamWeb/Views/Home/Index.cshtml]
+[C:/Users/Mr Orkhan/Desktop/ExamProject/ExamWeb/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/ExamProect/ExamWeb/Views/Home/Privacy.cshtml]
+[C:/Users/Mr Orkhan/Desktop/ExamProject/ExamWeb/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/ExamProect/ExamWeb/Views/Lesson/Create.cshtml]
+[C:/Users/Mr Orkhan/Desktop/ExamProject/ExamWeb/Views/Lesson/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVzc29uXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/ExamProect/ExamWeb/Views/Lesson/Index.cshtml]
+[C:/Users/Mr Orkhan/Desktop/ExamProject/ExamWeb/Views/Lesson/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVzc29uXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/ExamProect/ExamWeb/Views/Lesson/UpdateLesson.cshtml]
+[C:/Users/Mr Orkhan/Desktop/ExamProject/ExamWeb/Views/Lesson/UpdateLesson.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVzc29uXFVwZGF0ZUxlc3Nvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/ExamProect/ExamWeb/Views/Shared/Error.cshtml]
+[C:/Users/Mr Orkhan/Desktop/ExamProject/ExamWeb/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/ExamProect/ExamWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Mr Orkhan/Desktop/ExamProject/ExamWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/ExamProect/ExamWeb/Views/Student/Create.cshtml]
+[C:/Users/Mr Orkhan/Desktop/ExamProject/ExamWeb/Views/Student/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/ExamProect/ExamWeb/Views/Student/Index.cshtml]
+[C:/Users/Mr Orkhan/Desktop/ExamProject/ExamWeb/Views/Student/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/ExamProect/ExamWeb/Views/Student/UpdateStudent.cshtml]
+[C:/Users/Mr Orkhan/Desktop/ExamProject/ExamWeb/Views/Student/UpdateStudent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxVcGRhdGVTdHVkZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/ExamProect/ExamWeb/Views/_ViewImports.cshtml]
+[C:/Users/Mr Orkhan/Desktop/ExamProject/ExamWeb/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/ExamProect/ExamWeb/Views/_ViewStart.cshtml]
+[C:/Users/Mr Orkhan/Desktop/ExamProject/ExamWeb/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/ExamProect/ExamWeb/Views/Shared/_Layout.cshtml]
+[C:/Users/Mr Orkhan/Desktop/ExamProject/ExamWeb/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-2u74r56lvx

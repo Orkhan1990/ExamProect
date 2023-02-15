@@ -1,5 +1,8 @@
-﻿using BusinessLayer.Abstract;
+﻿using AutoMapper;
+using BusinessLayer.Abstract;
 using EntityLayer.Concrete;
+using EntityLayer.DTO_s.LessonDTO_s;
+using ExamWeb.ValidationRules;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,16 +12,19 @@ namespace ExamWeb.Controllers
     {
         private readonly ILessonService _lessonService;
         private readonly IValidator<Lesson> _validator;
+        private readonly IMapper _mapper;
 
-        public LessonController(ILessonService lessonService, IValidator<Lesson> validator)
+        public LessonController(ILessonService lessonService, IValidator<Lesson> validator,IMapper mapper)
         {
             _lessonService =lessonService;
             _validator = validator;
+            _mapper = mapper;
         }
         public async Task<IActionResult> Index()
         {
             var values = await _lessonService.GetAll();
-            return View(values);
+            var objectValue=_mapper.Map<IList<LessonGetAllDTO>>(values);
+            return View(objectValue);
         }
 
 
@@ -30,9 +36,10 @@ namespace ExamWeb.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Lesson lesson)
+        public async Task<IActionResult> Create(LessonCreateDTO lesson)
         {
-            var validationResult = await _validator.ValidateAsync(lesson);
+            var entity = _mapper.Map<Lesson>(lesson);
+            var validationResult = await _validator.ValidateAsync(entity);
             if (validationResult.IsValid)
             {
                 Lesson newLesson = new Lesson()
@@ -77,17 +84,19 @@ namespace ExamWeb.Controllers
             {
                 throw new ArgumentException("Belə dərs yoxdur!");
             }
+            var lesson = _mapper.Map<LessonUpdateDTO>(entity);
 
-            return View(entity);
+            return View(lesson);
         }
 
         [HttpPost]
-        public async Task<IActionResult> UpdateLesson(Lesson lesson)
+        public async Task<IActionResult> UpdateLesson(LessonUpdateDTO lesson)
         {
-            var validationResult = await _validator.ValidateAsync(lesson);
+            var entity = _mapper.Map<Lesson>(lesson);
+            var validationResult = await _validator.ValidateAsync(entity);
             if (validationResult.IsValid)
             {
-                await _lessonService.UpdateAsync(lesson);
+                await _lessonService.UpdateAsync(entity);
                 return RedirectToAction("Index", "Lesson");
             }
             else

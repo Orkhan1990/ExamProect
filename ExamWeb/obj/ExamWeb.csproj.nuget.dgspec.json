@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\ExamProect\\ExamWeb\\ExamWeb.csproj": {}
+    "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\ExamWeb\\ExamWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\ExamProect\\Business\\BusinessLayer.csproj": {
+    "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\Business\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\ExamProect\\Business\\BusinessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\Business\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "C:\\Users\\User\\Desktop\\ExamProect\\Business\\BusinessLayer.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\ExamProect\\Business\\obj\\",
+        "projectPath": "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\Business\\BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\Mr Orkhan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mr Orkhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,11 +33,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\User\\Desktop\\ExamProect\\DataAccess\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\ExamProect\\DataAccess\\DataAccessLayer.csproj"
+              "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\DataAccess\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\DataAccess\\DataAccessLayer.csproj"
               },
-              "C:\\Users\\User\\Desktop\\ExamProect\\Entity\\EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\ExamProect\\Entity\\EntityLayer.csproj"
+              "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\Entity\\EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\Entity\\EntityLayer.csproj"
               }
             }
           }
@@ -67,24 +67,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\User\\Desktop\\ExamProect\\DataAccess\\DataAccessLayer.csproj": {
+    "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\DataAccess\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\ExamProect\\DataAccess\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\DataAccess\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\User\\Desktop\\ExamProect\\DataAccess\\DataAccessLayer.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\ExamProect\\DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\DataAccess\\DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\Mr Orkhan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mr Orkhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -100,8 +100,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\User\\Desktop\\ExamProect\\Entity\\EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\ExamProect\\Entity\\EntityLayer.csproj"
+              "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\Entity\\EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\Entity\\EntityLayer.csproj"
               }
             }
           }
@@ -153,24 +153,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\User\\Desktop\\ExamProect\\Entity\\EntityLayer.csproj": {
+    "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\Entity\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\ExamProect\\Entity\\EntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\Entity\\EntityLayer.csproj",
         "projectName": "EntityLayer",
-        "projectPath": "C:\\Users\\User\\Desktop\\ExamProect\\Entity\\EntityLayer.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\ExamProect\\Entity\\obj\\",
+        "projectPath": "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\Entity\\EntityLayer.csproj",
+        "packagesPath": "C:\\Users\\Mr Orkhan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mr Orkhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -213,24 +213,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\User\\Desktop\\ExamProect\\ExamWeb\\ExamWeb.csproj": {
+    "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\ExamWeb\\ExamWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\ExamProect\\ExamWeb\\ExamWeb.csproj",
+        "projectUniqueName": "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\ExamWeb\\ExamWeb.csproj",
         "projectName": "ExamWeb",
-        "projectPath": "C:\\Users\\User\\Desktop\\ExamProect\\ExamWeb\\ExamWeb.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\ExamProect\\ExamWeb\\obj\\",
+        "projectPath": "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\ExamWeb\\ExamWeb.csproj",
+        "packagesPath": "C:\\Users\\Mr Orkhan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\ExamWeb\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mr Orkhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -246,14 +246,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\User\\Desktop\\ExamProect\\Business\\BusinessLayer.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\ExamProect\\Business\\BusinessLayer.csproj"
+              "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\Business\\BusinessLayer.csproj": {
+                "projectPath": "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\Business\\BusinessLayer.csproj"
               },
-              "C:\\Users\\User\\Desktop\\ExamProect\\DataAccess\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\ExamProect\\DataAccess\\DataAccessLayer.csproj"
+              "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\DataAccess\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\DataAccess\\DataAccessLayer.csproj"
               },
-              "C:\\Users\\User\\Desktop\\ExamProect\\Entity\\EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\ExamProect\\Entity\\EntityLayer.csproj"
+              "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\Entity\\EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\Entity\\EntityLayer.csproj"
               }
             }
           }
@@ -268,6 +268,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[11.4.0, )"
@@ -324,7 +332,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

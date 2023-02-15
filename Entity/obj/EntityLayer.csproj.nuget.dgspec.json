@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\ExamProect\\Entity\\EntityLayer.csproj": {}
+    "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\Entity\\EntityLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\ExamProect\\Entity\\EntityLayer.csproj": {
+    "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\Entity\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\ExamProect\\Entity\\EntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\Entity\\EntityLayer.csproj",
         "projectName": "EntityLayer",
-        "projectPath": "C:\\Users\\User\\Desktop\\ExamProect\\Entity\\EntityLayer.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\ExamProect\\Entity\\obj\\",
+        "projectPath": "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\Entity\\EntityLayer.csproj",
+        "packagesPath": "C:\\Users\\Mr Orkhan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mr Orkhan\\Desktop\\ExamProject\\Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mr Orkhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -60,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
